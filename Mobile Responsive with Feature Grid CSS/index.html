@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=	">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mobile Responsive with Feature CSS Grid</title>
+    <link rel="stylesheet" href="/css/style.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="brand">Feature <span>CSS Grid</span></h1>
+        <div class="wrapper">
+            <div class="company-info">
+                <h3>Company Information</h3>
+                <ul>
+                    <li><i class="glyphicon glyphicon-road"></i>&nbsp 33 Shaddock Street</li>
+                    <li><i class="glyphicon glyphicon-map-marker"></i>&nbsp Mt. Eden, Auckland, New Zealand 0600</li>
+                    <li><i class="glyphicon glyphicon-earphone"></i>&nbsp (+64)21 029 90073</li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h3>Email Us</h3>
+                <form>
+                    <p>
+                        <label>Contact Name</label>
+                        <input type="text" id="name" name="name" minlength="2" maxlength="50" required/>
+                    </p>
+                    <!-- <p>
+                        <label>Company</label>
+                        <input type="text" id="company" name="company" required/>
+                    </p> -->
+                    <p>
+                        <label>Email Address</label>
+                        <input type="email" id="mail" name="mail" minlength="2" maxlength="50" required/>
+                    </p>
+                    <p>
+                        <label>Phone Number</label>
+                        <input type="number" id="phone" name="phone" max="9999999999" required/>
+                    </p>
+                    <p class="full">
+                        <label>Message</label>
+                        <textarea name="message" rows="5"></textarea>
+                    </p>
+                    <p class="full">
+                        <button>Submit</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
