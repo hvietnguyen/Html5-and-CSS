@@ -1,0 +1,3 @@
+Ref: https://github.com/foliotek/croppie
+Ref: https://github.com/lpsBetty/angular-croppie
+Doc: http://foliotek.github.io/Croppie/#documentation

@@ -1,0 +1,12 @@
+.cr-boundary{
+    border-radius:50%;
+}
+
+#result{
+    text-align: center;
+}
+
+#result > img{
+    border-radius:50%;
+}
+

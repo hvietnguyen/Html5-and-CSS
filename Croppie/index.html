@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Croppie Demo</title>
+    <!-- <link rel="stylesheet" href="https://rawgit.com/Foliotek/Croppie/master/croppie.css" /> -->
+     <link rel="stylesheet" href="/style/croppie.css" /> 
+    <link rel="stylesheet" href="/style/ng-croppie.css" />
+    <link rel="stylesheet" href="/style/myStyle.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body ng-app="myApp" ng-controller="MyCtrl">
+    <div class="row">
+        <input type="file" id="upload" accept="image/*" />
+
+        <!-- Croppie needs a container -> using 'boundary' option -->
+        <croppie ng-if="cropped.source" src="cropped.source" ng-model="cropped.image" options="cropped.opts"></croppie>
+
+        <hr /> Cropped Image: <br>
+        <div id="result">
+            <img width="200" height="200" ng-src="{{cropped.image}}" />
+        </div>
+    </div>    
+    
+    <div class="row">
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" ng-click="toggleModal()">Open Modal</button>
+    </div>    
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- <ng-croppie src="inputImage" ng-model='outputImage' update='onUpdate' boundry="{w: 200, h: 200}" viewport="{w: 200, h: 200}"
+                        orientation="true" rotation="90" type="circle" >
+                    </ng-croppie> -->
+                    <div id="image-cropper"></div>
+                    <!-- <croppie ng-if="cropped.source" src="cropped.source" ng-model="cropped.image" options="cropped.opts"></croppie> -->
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+    <script data-require="jquery" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script data-require="angular.js@1.5.x" src="https://code.angularjs.org/1.5.8/angular.js" data-semver="1.5.8"></script> 
+    <script src="/script/exif.js"></script>
+    <script src="/script/croppie.js"></script> 
+    <script src="/script/ng-croppie.js"></script>
+    <script type="text/javascript" src="//rawgit.com/lpsBetty/angular-croppie/master/angular-croppie.js"></script>
+    <script src="/script/app.js"></script>
+</body>
+</html>

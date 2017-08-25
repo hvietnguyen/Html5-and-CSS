@@ -10,7 +10,7 @@ $(function () {
 				down: "fa fa-arrow-down"
 			}
 		}).find('input:first').on("focus",function () {
-			// check if the date is correct. We can accept dd-DD-yyyy and yyyy-DD-dd.
+			// check if the date is correct. We can accept dd-MM-yyyy and yyyy-MM-dd.
 			// update the format if it's yyyy-mm-dd
 			var date = parseDate($(this).val());
 
@@ -36,7 +36,6 @@ $(function () {
    }
    
    var parseDate = function(value) {
-	   debugger;
 		var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
 		if (m)
 			value = m[5] + '-' + ("00" + m[3]).slice(-2) + '-' + ("00" + m[1]).slice(-2);
